@@ -1,0 +1,125 @@
+body{
+    /* background-color: #2e1919; */
+    /* background-color: rgb(228, 199, 164); */
+    background-color: #342317e0;
+    /* background: linear-gradient(135deg, #0d0d0d, #1a1a1a); */
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 10px;
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* background: linear-gradient(90deg, black, #1b1a1a); */
+    /* border: 2px solid black; */
+    padding: 2px;
+    margin: -10;
+    /* background-color: #e8d4d4; */
+    background: linear-gradient(#faf3e0,#eda98c) ;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.7);
+    position: relative;
+    padding-right: 50px;
+    height: 130px;  
+}
+.logo-name{
+    position: relative;
+    left: 20px;
+    font-size: 25px;
+    /* background: black;
+    color:black; */
+    /* box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5); */
+    font-family: Segoe Script;
+    padding: 0.5%;
+    /* border-radius: 10px; */
+    /* margin: 5px; */
+    /* border:2px solid black; */
+}
+.logo-name img{
+    position: absolute;
+    height: 160px;
+    top: -80px;
+    left: 0px;
+}
+.nav-links{
+    list-style: none;
+    margin: 0;
+    display: flex;
+}
+.nav-links li{
+    margin-left: 20px;
+    margin-right: 10px;
+}
+.nav-links li a{
+    color: rgb(107, 67, 61);
+    font-family: Segoe Script;
+    font-size: 1.5rem;
+    text-decoration: none;
+    border-radius: 10px;
+    padding: 6px 7px;
+    transition: background-color 0.5s, transform 0.3s;
+}
+.nav-links li a:hover{
+    /* background: bisque;
+    color: black;
+    border: 2px solid black; */
+
+    background: linear-gradient(135deg, #937171, #703321);
+    color: #ffffff;
+    transform: scale(1.1);
+}   
+.container{
+    width: 1000px;
+    height: 600px;
+    display: flex;
+    /* box-shadow: 0 8px 16px rgba(0,0,0,0.274); */
+    overflow: hidden;
+    align-content: center;
+    padding-left: 100px;
+    position: relative;
+    top: 80px;
+    left: 200px;
+    background: url("./doggy.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+.image-section{
+    flex: 1;
+}
+.image-section img{
+    width: 700px;
+    height: 100%;
+    object-fit: cover;
+}
+.form-section{
+    flex: 1;
+    background-color:rgba(11, 10, 10, 0.468);
+    padding: 70px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    position: absolute;
+    left: 500px;
+    top: 100px;
+    height: 330px;
+    width: 350px;
+    padding-left: 95px;
+    font-size: 1.3em;
+}
+.w{
+    height: 100px;
+    width: 100px;
+    background-color:342317e0 ;
+    position: relative;
+    top: 150px;
+}
+select{
+    height: 30px;
+    width: 90px;
+}
+button{
+    height: 48px;
+    width: 120px; 
+}

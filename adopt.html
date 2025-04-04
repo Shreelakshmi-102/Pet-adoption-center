@@ -1,0 +1,123 @@
+<html>
+    <head>
+        <title>PET</title>
+        <link rel="stylesheet" href="adopt.css">
+        <!-- data validation -->
+        <script type="text/javascript">
+            function validate() {
+                if (document.myForm.Name.value == "") {
+                    alert("Please provide your name");
+                    document.myForm.Name.focus();
+                    return false;
+                }
+    
+                var gen = document.getElementsByName('gender');
+                var genValue = false;
+                for (var i = 0; i < gen.length; i++) {
+                    if (gen[i].checked) {
+                        genValue = true;
+                        break;
+                    }
+                }
+                if (!genValue) {
+                    alert("Gender not selected");
+                    return false;
+                }
+    
+                if (document.myForm.Email.value == "") {
+                    alert("Please provide your Email ID");
+                    document.myForm.Email.focus();
+                    return false;
+                }
+    
+                if (document.myForm.phno.value == "" || document.myForm.phno.value.length != 10) {
+                    alert("Please provide a valid phone number (10 digits)");
+                    document.myForm.phno.focus();
+                    return false;
+                }
+    
+                if (document.myForm.Zip.value == "" || document.myForm.Zip.value.length != 6) {
+                    alert("Please provide a valid zip code (6 digits)");
+                    document.myForm.Zip.focus();
+                    return false;
+                }
+    
+                if (document.myForm.Country.value == "-1") {
+                    alert("Please select your Country");
+                    return false;
+                }
+    
+                return true;
+            }
+    
+            function validateEmail() {
+                var emailID = document.myForm.Email.value;
+                var atpos = emailID.indexOf("@");
+                var dotpos = emailID.lastIndexOf(".");
+                if (atpos < 1 || (dotpos - atpos < 2)) {
+                    alert("Please enter a correct Email ID");
+                    document.myForm.Email.focus();
+                    return false;
+                }
+                return true;
+            }
+        </script>
+    </head>
+    <body>
+        <nav class="navbar">
+            <div class="logo-name">
+                <img src="./logo.png" alt="logo" height="110px">
+            </div>
+            <!-- <input type="checkbox" id="toggle-menu">
+            <div class="hamburger" onclick="this.classList.toggle('active');">-->
+                <span></span>
+                <span></span>
+                <span></span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="./ff.html">Furry Fam</a></li>
+            <li><a href="./adopt.html">Adopt</a></li>
+        </ul>
+        </nav>
+        <div class="container">
+            <div class="form-section">
+                <form action="adopt.php" method="POST" name="myForm" onsubmit="return validate();">
+                    <h1>ADOPT ME</h1>
+                    <label>First Name:</label>
+                    <input type="text" name="fname" id="fname" required> <br> <br>
+                    <label>Last Name:</label> 
+                    <input type="text"name="lname" id="lname" required> <br><br>
+                    <label>Email:</label>
+                    <input type="email" name="email" id="email" required onchange="validateEmail();"> <br><br>
+                    <label>Phone No:</label> 
+                    <input type="number" name="phone" id="phone" required> <br><br>
+                    <label>Pet Name:</label> 
+                    <select name="petid" id="petid" required> <br><br>
+                        <option value="F-1001">Charlie</option>           
+                        <option value="P-2022"> Bella</option>
+                        <option value="T-3003"> Luna</option>
+                        <option value="M-4004"> Coco</option>
+                        <option value="B-5005">Milo</option>
+                        <option value="H-6006">Oreo</option>
+                        <option value="W-7007">Daisy</option>
+                        <option value="W-8008">Ginger</option>
+                        <option value="P-9009">Max</option>
+                        <option value="F-1010"> Nala</option>
+                        <option value="S-1111">Pepper</option>
+                        <option value="C-1212">Snowball</option>
+                        <option value="N-1313">Simba</option>
+                        <option value="T-1414">Rocky</option>
+                        <option value="P-1515">Snowball</option>
+                        <option value="F-1616"> Broody</option>
+                    </select><br><br>
+                    <input type="checkbox">I agree to the adoption guidelines <br><br>
+                    <button type="submit">Submit Request</button>
+                  </form>
+            </div>
+        </div>
+        <div class="w">
+        </div>
+
+    </body>
+</html>
